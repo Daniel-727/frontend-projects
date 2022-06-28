@@ -1,0 +1,130 @@
+/*
+        SPACING SYSTEM (px)
+        2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+        FONT SIZE SYSTEM (px)
+        10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+        
+
+
+        
+        MAIN COLOR: #339af0
+        GREY COLOR: #212529 for carousel?
+        
+        item color: #495057;
+
+        ---Daisy---
+        Main Color: #fab005 or #fff3bf
+
+        ---Chrysanthemum---
+        Main Color: #ffdeeb or #fcc2d7
+
+        ---Orchid---
+       Main Color: #e599f7 or #da77f2 or #cc5de8
+
+        ---Rose---
+        Main Color: #fa5252 or #f03e3e
+
+        ---Tulip---
+         Main Color: #f06595 or #e64980
+       
+
+*/
+
+      
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel{
+    width: 100vw;
+    background-color: #212529;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+}
+
+.item{
+    background-color: #495057;
+    border-radius: 35px;
+    
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.item-content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 24px;
+}
+
+.title{
+    font-size: 32px;
+}
+
+.content{
+    line-height: 1.4;
+}
+
+
+/*---CUSTOM FLOWER STYLES---*/
+/*--------------------------*/
+
+.daisy .title{
+    color: #fff3bf;
+}
+.daisy .content{
+    color: #fab005;
+}
+
+.chrysanthemum .title{
+    color: #fff0f6;
+}
+.chrysanthemum .content{
+    color: #fcc2d7;
+}
+
+.orchid .title{
+    color: #f3d9fa;
+}
+.orchid .content{
+    color: #e599f7;
+}
+
+.rose .title{
+    color: #ffa8a8;
+}
+.rose .content{
+    color: #ff6b6b;
+}
+
+.tulip .title{
+    color: #faa2c1;
+}
+.tulip .content{
+    color: #f06595;
+}
+
+
+
+/*---ACTIVE STATE---*/
+/*------------------*/
+
+.item-active{
+    width: 400px;
+}
+
+.item img{
+    width: 100%;
+    height: 75%;
+    border-radius: 35px 35px 0 0;
+}
+
+
