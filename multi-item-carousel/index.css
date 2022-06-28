@@ -46,6 +46,9 @@
     display: flex;
     justify-content: center;
     padding: 32px;
+    display: flex;
+    gap: 24px;
+    align-items: center;
 }
 
 .item{
@@ -118,7 +121,8 @@
 /*------------------*/
 
 .item-active{
-    width: 400px;
+    height: 570px;
+    width: 250px;
 }
 
 .item img{
@@ -127,4 +131,21 @@
     border-radius: 35px 35px 0 0;
 }
 
+/*---SHOWN STATE---*/
+/*-----------------*/
+
+.item-left, .item-right{
+    height: 520px;
+    width: 225px;
+}
+
+
+
+
+/*---HIDDEN STATE---*/
+/*------------------*/
+
+.item-hidden{
+    display: none;
+}
 
