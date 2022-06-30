@@ -41,7 +41,7 @@
 }
 
 .carousel{
-    width: 100vw;
+    width: 100%;
     background-color: #212529;
     display: flex;
     justify-content: center;
@@ -49,16 +49,24 @@
     display: flex;
     gap: 24px;
     align-items: center;
+    height: auto;
 }
 
 .item{
+    height: 530px;
+    width: 220px;
     background-color: #495057;
-    border-radius: 35px;
-    
+    border-radius: 25px;
+    vertical-align: top;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
+}
+
+.item img{
+    min-width: 200px;
+    width: 100%;
+    max-height: 75%;
+    border-radius: 25px 25px 0 0;
 }
 
 .item-content{
@@ -68,13 +76,15 @@
     padding: 24px;
 }
 
-.title{
-    font-size: 32px;
+.title {
+    font-size: 24px;
+    font-weight: 500;
 }
 
 .content{
     line-height: 1.4;
 }
+
 
 
 /*---CUSTOM FLOWER STYLES---*/
@@ -121,24 +131,16 @@
 /*------------------*/
 
 .item-active{
-    height: 570px;
-    width: 250px;
+    
 }
 
-.item img{
-    width: 100%;
-    height: 75%;
-    border-radius: 35px 35px 0 0;
-}
 
 /*---SHOWN STATE---*/
 /*-----------------*/
 
 .item-left, .item-right{
-    height: 520px;
-    width: 225px;
+    transform: scale(0.90);
 }
-
 
 
 
