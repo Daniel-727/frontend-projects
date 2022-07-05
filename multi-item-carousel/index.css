@@ -131,12 +131,8 @@
 /*------------------*/
 
 .item-active{
-    
+    display: block;
 }
-
-
-/*---SHOWN STATE---*/
-/*-----------------*/
 
 .item-left, .item-right{
     transform: scale(0.90);
@@ -151,3 +147,45 @@
     display: none;
 }
 
+
+
+/*---BUTTONS---*/
+/*-------------*/
+
+.btn{
+    cursor: pointer;
+    width: 36px;
+    height: 36px;
+    background-color: #212529;
+    border: none;
+    position: absolute;
+}
+
+.left{
+    left: 0;
+}
+
+.right{
+    right: 0;
+}
+
+.left-icon, .right-icon{
+    stroke: #e9ecef;
+}
+
+@media (min-width: 1000px){
+    .btn{
+        position: absolute;
+    }
+    .left{
+        left: 10%;
+    }
+    
+    .right{
+        right: 10%;
+    }
+
+    body{
+        background-color: purple;
+    }
+}
