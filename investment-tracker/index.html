@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Investment Tracker</title>
+
+        <!--My CSS-->
+        <link href="./styles.css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <form action="">
+            <div class="invested">
+                <label for="invested">Annual Investment</label>
+                <input type="text" name="invested" id="invested" />
+            </div>
+
+            <div class="interest">
+                <label for="interest">Interest</label>
+                <select name="interest" id="interest">
+                    <option value="5%">5%</option>
+                    <option value="5.5%">5.5%</option>
+                    <option value="6%">6%</option>
+                    <option value="6.5%">6.5%</option>
+                    <option value="7%">7%</option>
+                    <option value="7.5%">7.5%</option>
+                    <option value="8%">8%</option>
+                    <option value="8.5%">8.5%</option>
+                    <option value="9%">9%</option>
+                    <option value="9.5%">9.5%</option>
+                    <option value="10%">10%</option>
+                </select>
+            </div>
+
+            <div class="years">
+                <label for="years">Years Invested</label>
+                <input type="text" name="years" id="years" />
+            </div>
+
+            <input type="button" name="submit" id="submit" value="Submit" />
+            <input type="button" name="reset" id="reset" value="Reset" />
+        </form>
+
+        <h1 class="return_value"></h1>
+
+        <!--My Javascript-->
+        <script src="./index.js"></script>
+    </body>
+</html>
