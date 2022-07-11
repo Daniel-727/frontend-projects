@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*
+    COLORS
+
+    PRIMARY: #5c7cfa
+    LIGHT: #dbe4ff
+    GREY: 
+    TEXT: #212529
+*/
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+header {
+    background-color: #5c7cfa;
+    color: #212529;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar input {
+    border-radius: 50px;
+    padding: 5px 15px;
+}
