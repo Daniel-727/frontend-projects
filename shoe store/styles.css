@@ -42,12 +42,17 @@ html{
 /*-----Navbar-----*/
 /*----------------*/
 
+.nav-logo{
+    width: 19.84rem;
+    /*setting the logo width to the width of the utility-components so they have an equal width which allows the nav-links to be centered correctly*/
+}
+
 .navbar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 1.2rem 1.6rem;
     gap: 1.2rem;
+    justify-content: space-between;
 }
 
 .nav-links{
