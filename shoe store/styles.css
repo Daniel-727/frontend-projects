@@ -1,0 +1,74 @@
+/*
+
+---01 TYPOGRAPHY SYSTEM
+
+
+font weights:
+Default: 400
+
+Line heights:
+default: 1
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+---02 COLORS
+
+- primary: #e67e22
+- Greys: #555
+         #333
+
+---05 Shadows
+
+---06 BORDER-RADIUS
+
+---07 WHITESPACE
+
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*-----Navbar-----*/
+/*----------------*/
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.2rem 1.6rem;
+    gap: 1.2rem;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    font-size: 1.6rem;
+}
+
+.nav-link:link, .nav-link:visited, .nav-logo, .nav-link:hover, .nav-link:active{
+    text-decoration: none;
+    color:#000;
+}
+
+.utility-components{
+    display: flex;
+    gap: 0.8rem;
+}
+
+.shopping-cart{
+    width: 24px;
+    height: 24px;
+    stroke: #000;
+}
