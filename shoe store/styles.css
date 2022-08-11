@@ -50,7 +50,8 @@ html{
 .navbar{
     display: flex;
     align-items: center;
-    margin: 1.2rem 1.6rem;
+    margin: 1.6rem 4.8rem 2.4rem 4.8rem;
+    /* margin: 1.6rem 4.8rem; */
     gap: 1.2rem;
     justify-content: space-between;
 }
@@ -76,4 +77,27 @@ html{
     width: 24px;
     height: 24px;
     stroke: #000;
+}
+
+
+/*-----Hero Section-----*/
+/*----------------------*/
+
+.carousel{
+    margin: 0 3.2rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.carousel img{
+    /*although there is no set width for the carousel or the section-hero, the default width for the body is the full size of the screen. so the code below is taking 100% width of the body which is the full size of the screen*/
+    width: 100%;
+}
+
+.content{
+    font-size: 4.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
