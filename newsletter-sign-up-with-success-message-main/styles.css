@@ -1,0 +1,10 @@
+body {
+  display: grid;
+  gap: 100px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
