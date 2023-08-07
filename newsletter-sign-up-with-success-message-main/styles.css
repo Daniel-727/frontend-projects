@@ -1,10 +1,81 @@
+/* Variables */
+:root {
+  --color-primary: hsl(4, 100%, 67%);
+  --color-dark-grey: hsl(234, 29%, 20%);
+  --color-charcoal: hsl(235, 18%, 26%);
+  --color-grey: hsl(231, 7%, 60%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
 body {
   display: grid;
-  gap: 100px;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  font-size: 16px;
+}
+
+img {
+  width: 100%;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  gap: 1rem;
+  width: 100%;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 1rem;
 }
+
+.form-container label {
+  font-weight: 700;
+}
+
+.form-container form input {
+  width: 100%;
+  padding: 1.5rem;
+  border: solid 1px var(--color-grey);
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+ul {
+  list-style: none;
+  font-size: 16px;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+
+li {
+  display: flex;
+  gap: 2rem;
+}
+
+button {
+  background: var(--color-dark-grey);
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-dark-grey);
+  color: var(--color-white);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* Helper classes */
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+/* @media (min-width: ) */
