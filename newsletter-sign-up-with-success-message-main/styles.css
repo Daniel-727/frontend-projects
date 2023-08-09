@@ -52,6 +52,11 @@ img {
   font-size: 1.5rem;
 }
 
+.input-container form input:focus,
+.input-container form input:active {
+  outline: solid 1px var(--color-dark-grey);
+}
+
 ul {
   list-style: none;
   font-size: 16px;
@@ -129,4 +134,8 @@ button {
     border-radius: 25px;
     object-fit: cover;
   }
+}
+
+/* Only for devices that support hover with a fine pointer (mouse or stylus)*/
+@media (hover: hover) and (pointer: fine) {
 }
