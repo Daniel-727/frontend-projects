@@ -57,6 +57,10 @@ img {
   outline: solid 1px var(--color-dark-grey);
 }
 
+.input-container form input:hover {
+  cursor: pointer;
+}
+
 ul {
   list-style: none;
   font-size: 16px;
@@ -71,9 +75,9 @@ li {
 
 button {
   background: var(--color-dark-grey);
-  padding: 1.5rem;
+  padding: 1.6rem;
   border-radius: 10px;
-  border: 1px solid var(--color-dark-grey);
+  border: none;
   color: var(--color-white);
   font-size: 1.5rem;
   font-weight: 700;
@@ -138,4 +142,9 @@ button {
 
 /* Only for devices that support hover with a fine pointer (mouse or stylus)*/
 @media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background: linear-gradient(90deg, rgba(255, 82, 123, 255), var(--color-primary));
+    box-shadow: 0 1rem 1rem 0.5rem rgba(255, 117, 117, 0.25);
+    cursor: pointer;
+  }
 }
