@@ -23,9 +23,6 @@ img {
   width: 100%;
 }
 
-.content-container {
-}
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -42,6 +39,17 @@ img {
 
 .input-container label {
   font-weight: 700;
+}
+
+.input-container .label-error-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-container .label-error-container .error {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
 }
 
 .input-container form input {
@@ -147,4 +155,16 @@ button {
     box-shadow: 0 1rem 1rem 0.5rem rgba(255, 117, 117, 0.25);
     cursor: pointer;
   }
+}
+
+/* hidden */
+
+.hidden {
+  visibility: hidden;
+}
+
+.input-container form .input_error {
+  background: rgba(255, 98, 87, 0.15);
+  color: var(--color-primary);
+  border: solid 1px var(--color-primary);
 }
