@@ -70,13 +70,16 @@
         </ul>
 
         <div class="input-container mb-1">
-          <label for="email"> Email address </label>
-          <form action="">
-            <input type="email" placeholder="email@company.com" />
+          <div class="label-error-container">
+            <label for="email"> Email address </label>
+            <p class="error hidden" data-id="error">Valid email required</p>
+          </div>
+          <form action="" id="subscribe" data-id="form" novalidate>
+            <input type="email" placeholder="email@company.com" data-id="email_input" />
           </form>
         </div>
 
-        <button>Subscribe to monthly newsletter</button>
+        <button form="subscribe">Subscribe to monthly newsletter</button>
 
         <div class="attribution">
           Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded
@@ -93,5 +96,6 @@
     button inside to confirm your subscription. Dismiss message -->
 
     <!-- Success message end -->
+    <script src="./index.js"></script>
   </body>
 </html>
