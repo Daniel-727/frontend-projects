@@ -9,6 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  height: 100vh;
 }
 
 h1 {
@@ -69,6 +70,12 @@ img {
   cursor: pointer;
 }
 
+.input-container form .input_error {
+  background: rgba(255, 98, 87, 0.15);
+  color: var(--color-primary);
+  border: solid 1px var(--color-primary);
+}
+
 ul {
   list-style: none;
   font-size: 16px;
@@ -91,11 +98,51 @@ button {
   font-weight: 700;
 }
 
-/* Helper classes */
+/* Success Page */
 
-.mb-1 {
-  margin-bottom: 1rem;
+.success-container {
+  height: 100%;
+  margin: 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
+
+.success-icon {
+  width: 5rem;
+  height: 5rem;
+}
+
+.success-message {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--color-dark-grey);
+  margin-top: 15rem;
+}
+
+.thank-you {
+  font-size: 3.5rem;
+  line-height: 3.5rem;
+}
+
+.user-email {
+  font-weight: 700;
+}
+
+.dismiss {
+  text-decoration: none;
+  background: var(--color-dark-grey);
+  color: var(--color-white);
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 4rem;
+}
+
+/* Transition between mobile and desktop view */
 
 @media (min-width: 440px) {
   body {
@@ -163,12 +210,16 @@ button {
   visibility: hidden;
 }
 
-.input-container form .input_error {
-  background: rgba(255, 98, 87, 0.15);
-  color: var(--color-primary);
-  border: solid 1px var(--color-primary);
-}
-
 .block-hidden {
   display: none;
+}
+
+/* Helper classes */
+
+.mb-1 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 2rem;
 }

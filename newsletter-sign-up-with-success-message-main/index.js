@@ -19,11 +19,13 @@ const validEmail = () => {
   }
 };
 
-email_input.addEventListener("input", () => validEmail());
+if (email_input) {
+  email_input.addEventListener("input", () => validEmail());
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  if (validEmail()) {
-    form.submit();
-  }
-});
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (validEmail()) {
+      form.submit();
+    }
+  });
+}
