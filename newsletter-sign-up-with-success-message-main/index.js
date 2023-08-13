@@ -1,7 +1,8 @@
 const email_regex = /[\w /.]+@\w+.com|.edu|.net$/;
 const form = document.querySelector('[data-id="form"]');
 const email_input = document.querySelector('[data-id="email_input"]');
-
+const success = document.querySelector('[data-id="success-message"]');
+const sign_up = document.querySelector('[data-id="sign-up"]');
 const error_message = document.querySelector('[data-id="error"]');
 
 const validEmail = () => {

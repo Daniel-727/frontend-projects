@@ -168,3 +168,7 @@ button {
   color: var(--color-primary);
   border: solid 1px var(--color-primary);
 }
+
+.block-hidden {
+  display: none;
+}
