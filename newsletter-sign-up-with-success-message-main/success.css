@@ -58,8 +58,7 @@ p {
   margin-bottom: 4rem;
 }
 
-/* Success Transition between mobile and desktop view */
-
+/* Post Mobile View */
 @media (min-width: 500px) {
   body {
     background: var(--color-charcoal);
@@ -68,15 +67,45 @@ p {
     align-items: center;
   }
 
+  p {
+    font-size: 1.8rem;
+  }
+
   .success-container {
     background: var(--color-white);
-    /* padding: 2rem;
-      border-radius: 25px; */
+    border-radius: 25px;
+    max-width: 550px;
+    max-height: 550px;
+    padding: 5rem 6rem;
+    box-shadow: 0 2rem 2rem 2rem rgba(0, 0, 0, 0.1);
+  }
+
+  .success-icon {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .thank-you {
+    font-size: 6rem;
+    line-height: 6rem;
+  }
+
+  .success-message {
+    margin-top: 0;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .dismiss {
+    padding: 2rem;
   }
 }
-
-/* Success Page for Desktop */
-@media (min-width: 930px) {
+/* Only for devices that support hover with a fine pointer (mouse or stylus)*/
+@media (hover: hover) and (pointer: fine) {
+  .dismiss:hover {
+    background: linear-gradient(90deg, rgba(255, 82, 123, 255), var(--color-primary));
+    box-shadow: 0 1rem 1rem 1rem rgba(255, 98, 87, 0.22);
+  }
 }
 
 /* Helper classes */
