@@ -98,50 +98,6 @@ button {
   font-weight: 700;
 }
 
-/* Success Page */
-
-.success-container {
-  height: 100%;
-  margin: 0 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.success-icon {
-  width: 5rem;
-  height: 5rem;
-}
-
-.success-message {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  color: var(--color-dark-grey);
-  margin-top: 15rem;
-}
-
-.thank-you {
-  font-size: 3.5rem;
-  line-height: 3.5rem;
-}
-
-.user-email {
-  font-weight: 700;
-}
-
-.dismiss {
-  text-decoration: none;
-  background: var(--color-dark-grey);
-  color: var(--color-white);
-  padding: 1.5rem;
-  font-weight: 700;
-  font-size: 16px;
-  text-align: center;
-  border-radius: 10px;
-  margin-bottom: 4rem;
-}
-
 /* Transition between mobile and desktop view */
 
 @media (min-width: 440px) {
@@ -195,15 +151,6 @@ button {
   }
 }
 
-/* Only for devices that support hover with a fine pointer (mouse or stylus)*/
-@media (hover: hover) and (pointer: fine) {
-  button:hover {
-    background: linear-gradient(90deg, rgba(255, 82, 123, 255), var(--color-primary));
-    box-shadow: 0 1rem 1rem 0.5rem rgba(255, 117, 117, 0.25);
-    cursor: pointer;
-  }
-}
-
 /* hidden */
 
 .hidden {
@@ -222,4 +169,13 @@ button {
 
 .mb-2 {
   margin-bottom: 2rem;
+}
+
+/* Only for devices that support hover with a fine pointer (mouse or stylus)*/
+@media (hover: hover) and (pointer: fine) {
+  button:hover {
+    background: linear-gradient(90deg, rgba(255, 82, 123, 255), var(--color-primary));
+    box-shadow: 0 1rem 1rem 0.5rem rgba(255, 117, 117, 0.25);
+    cursor: pointer;
+  }
 }
