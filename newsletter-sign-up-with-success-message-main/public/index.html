@@ -74,7 +74,7 @@
             <label for="email"> Email address </label>
             <p class="error hidden" data-id="error">Valid email required</p>
           </div>
-          <form action="./success.html" method="POST" id="subscribe" data-id="form">
+          <form action="./success.html" method="POST" id="subscribe" data-id="form" novalidate>
             <input type="email" placeholder="email@company.com" data-id="email_input" />
           </form>
         </div>
@@ -88,6 +88,6 @@
       </div>
     </div>
 
-    <script src="./index.js"></script>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

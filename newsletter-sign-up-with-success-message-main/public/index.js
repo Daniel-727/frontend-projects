@@ -1,4 +1,4 @@
-const email_regex = /[\w /.]+@\w+.com|.edu|.net$/;
+const email_regex = /[\w /.]+@\w+.com$|.edu$|.net$/;
 const form = document.querySelector('[data-id="form"]');
 const email_input = document.querySelector('[data-id="email_input"]');
 const error_message = document.querySelector('[data-id="error"]');
@@ -19,12 +19,12 @@ const validEmail = () => {
   }
 };
 
-if (email_input) {
-  email_input.addEventListener("input", () => validEmail());
+email_input.addEventListener("input", () => validEmail());
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    /* input_value.append("user_email", email_input.value); */
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  /*input_value.append("user_email", email_input.value); */
+  if (validEmail()) {
     form.submit();
-  });
-}
+  }
+});
