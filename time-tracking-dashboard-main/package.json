@@ -9,8 +9,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "compile:sass": "sass ./sass/styles.scss ./css/styles.css -w"
+    "compile:sass": "sass ./sass/main.scss ./css/main.css -w"
   },
-  "author": "",
+  "author": "Daniel Li",
   "license": "ISC"
 }
