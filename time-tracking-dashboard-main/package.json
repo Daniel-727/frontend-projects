@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "sass": "^1.66.1"
+  },
+  "name": "time-tracking-dashboard-main",
+  "description": "![Design preview for the Time tracking dashboard coding challenge](./design/desktop-preview.jpg)",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass": "sass ./sass/styles.scss ./css/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC"
+}
