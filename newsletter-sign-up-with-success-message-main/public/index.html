@@ -74,8 +74,9 @@
             <label for="email"> Email address </label>
             <p class="error hidden" data-id="error">Valid email required</p>
           </div>
-          <form action="./success.html" method="POST" id="subscribe" data-id="form" novalidate>
-            <input type="email" placeholder="email@company.com" data-id="email_input" />
+          <form action="./success" method="get" id="subscribe" data-id="form" novalidate>
+            <!--Form input needs name attribute in order to append to url when submitting using GET method, because data is appended to the url using name/value pairs-->
+            <input name="email" type="email" placeholder="email@company.com" data-id="email_input" />
           </form>
         </div>
 

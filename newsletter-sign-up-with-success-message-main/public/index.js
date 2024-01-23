@@ -3,7 +3,11 @@ const form = document.querySelector('[data-id="form"]');
 const email_input = document.querySelector('[data-id="email_input"]');
 const error_message = document.querySelector('[data-id="error"]');
 
+/* const data = FormData(form); */
+
 /* const input_value = new FormData(form); */
+
+const baseUrl = "http://localhost:8000";
 
 const validEmail = () => {
   let result = email_regex.test(email_input.value);
@@ -23,8 +27,16 @@ email_input.addEventListener("input", () => validEmail());
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  /*input_value.append("user_email", email_input.value); */
+
   if (validEmail()) {
-    form.submit();
+    fetch(baseUrl, {
+      method: "GET",
+      body: email_input.value,
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((err) => console.log(err));
+
+    /* form.submit(); */
   }
 });

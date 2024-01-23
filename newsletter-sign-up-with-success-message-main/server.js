@@ -1,83 +1,75 @@
 const http = require("http");
-const path = require("path");
 const fs = require("fs");
+const path = require("path");
+const url = require("url");
+const queryString = require("querystring");
 
-const host = "localhost";
+const server = http.createServer();
+const PORT = 3001;
 
-const PORT = process.env.PORT || 8000;
+const mimetypes = {
+  html: "text/html",
+  css: "text/css",
+  js: "text/javascript",
+};
 
-const requestListener = function (req, res) {
-  // Inefficient implementation of handling requests and responses
-  /* if (req.url === "/") {
-    fs.readFile(path.join(__dirname, "index.html"), (err, content) => {
-      if (err) throw err;
-      res.writeHead(200, { "Content-Type": "text/html" });
-      res.end(content);
-    });
-  }
-
-  if (req.url === "/success") {
-    fs.readFile(path.join(__dirname, "success.html"), (err, content) => {
-      if (err) throw err;
-      res.writeHead(200, { "Content-Tyoe": "text/html" });
-      res.end(content);
-    }); 
-  } */
-
-  // Better implementation of handling requests and responses
-  // Build file path
-  let filePath = path.join(__dirname, "public", req.url === "/" ? "index.html" : req.url);
-
-  // Get file extension
-  let extname = path.extname(filePath);
-
-  // Set initial content type
-  let contentType = "text/html";
-
-  // Check ext and set content type
-  switch (extname) {
-    case ".js":
-      contentType = "text/javascript";
-      break;
-    case ".css":
-      contentType = "text/css";
-      break;
-    case ".json":
-      contentType = "application/json";
-      break;
-    case ".png":
-      contentType = "image/png";
-      break;
-    case ".jpg":
-      contentType = "image/jpg";
-      break;
-    case ".svg": // Correct svg content-type below
-      contentType = "image/svg+xml";
-  }
-
-  // Read file
-  fs.readFile(filePath, (err, content) => {
-    if (err) {
-      if (err.code == "ENOENT") {
-        fs.readFile(path.join(__dirname, "public", "404.html"), (err, content) => {
-          res.writeHead(200, { "Content-Type": "text/html" });
-          res.end(content, "utf8");
-        });
+const getResource = (path) => {
+  return new Promise((resolve, reject) => {
+    fs.readFile(path, "utf8", (err, data) => {
+      if (err) {
+        reject(err);
       } else {
-        // Some server error
-        res.writeHead(500);
-        res.end(`Server Error: ${err.code}`);
+        resolve(data);
       }
-    } else {
-      // Success
-      res.writeHead(200, { "Content-Type": contentType });
-      res.end(content, "utf8");
-    }
+    });
   });
 };
 
-const server = http.createServer(requestListener);
+server.on("request", (req, res) => {
+  let url = req.url;
+  switch (url) {
+    case "/":
+      getResource("./public/index.html")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case `/success${queryString}`:
+      getResource("./public/success.html")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case "/css/reset.css":
+      getResource("./public/css/reset.css")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case "/css/styles.css":
+      getResource("./public/css/styles.css")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case "/index.js":
+      getResource("./public/index.js")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case "/assets/images/illustration-sign-up-mobile.svg":
+      getResource("./public/assets/images/illustration-sign-up-mobile.svg")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    case "/assets/images/favicon-32x32.png":
+      getResource("./public/assets/images/favicon-32x32.png")
+        .then((resource) => res.end(resource))
+        .catch((err) => console.log(err));
+      break;
+    default:
+      console.log(req.url);
+    /* let query = queryString.parse(req.url);
+      console.log(query); */
+  }
+});
 
-server.listen(PORT, host, () => {
-  console.log(`Server is running on http://${host}:${PORT}`);
+server.listen(PORT, () => {
+  console.log(`Server is listening on port:${PORT}`);
 });
