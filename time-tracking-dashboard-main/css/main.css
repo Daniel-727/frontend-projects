@@ -74,19 +74,68 @@ h6 {
 /* Variables */
 body {
   font-family: "Rubik", sans-serif;
-  color: #fff;
+  color: #fafafa;
 }
 
-/* Cards */
 main {
+  padding: 2rem;
   width: 100%;
   height: 100%;
   background: hsl(226, 43%, 10%);
+  display: grid;
+  gap: 2rem;
 }
 
-button {
-  border: none;
-  background: none;
+/* Cards */
+.card {
+  position: relative;
+  /* background: red; */
+  height: 16rem;
+  border-radius: 10px;
+}
+
+.card:hover .details {
+  background: hsl(235, 45%, 61%);
+}
+
+.details {
+  background: hsl(235, 46%, 20%);
+  height: 75%;
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.work-card {
+  background: no-repeat url("../images/icon-work.svg"), hsl(15, 100%, 70%);
+  background-position: 90% -14%;
+}
+
+.play-card {
+  background: no-repeat url("../images/icon-play.svg"), hsl(195, 74%, 62%);
+  background-position: 90% -4%;
+}
+
+.study-card {
+  background: no-repeat url("../images/icon-study.svg"), hsl(348, 100%, 68%);
+  background-position: 90% -5%;
+}
+
+.exercise-card {
+  background: no-repeat url("../images/icon-exercise.svg"), hsl(145, 58%, 55%);
+  background-position: 90% 0;
+}
+
+.social-card {
+  background: no-repeat url("../images/icon-social.svg"), hsl(264, 64%, 52%);
+  background-position: 90% -20%;
+}
+
+.self-care-card {
+  background: no-repeat url("../images/icon-self-care.svg"), hsl(43, 84%, 65%);
+  background-position: 90% -10%;
 }
 
 /*# sourceMappingURL=main.css.map */

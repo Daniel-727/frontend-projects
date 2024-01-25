@@ -1,31 +1,75 @@
 /* Variables */
 $blue: hsl(246, 80%, 60%);
-$light-red: hsl(15, 100%, 70%);
+$soft-orange: hsl(15, 100%, 70%);
 $soft-blue: hsl(195, 74%, 62%);
 $light-red: hsl(348, 100%, 68%);
 $lime-green: hsl(145, 58%, 55%);
 $violet: hsl(264, 64%, 52%);
-$soft-orange: hsl(43, 84%, 65%);
+$yellow: hsl(43, 84%, 65%);
 
 $very-dark-blue: hsl(226, 43%, 10%);
 $dark-blue: hsl(235, 46%, 20%);
 $desaturated-blue: hsl(235, 45%, 61%);
 $pale-blue: hsl(236, 100%, 87%);
-$white: #fff;
+$white: #fafafa;
 
 body {
   font-family: "Rubik", sans-serif;
   color: $white;
 }
-/* Cards */
 
 main {
+  padding: 2rem;
   width: 100%;
   height: 100%;
   background: $very-dark-blue;
+  display: grid;
+  gap: 2rem;
 }
 
-button {
-  border: none;
-  background: none;
+/* Cards */
+.card {
+  position: relative;
+  /* background: red; */
+  height: 16rem;
+  border-radius: 10px;
+}
+
+.card:hover .details {
+  background: $desaturated-blue;
+}
+
+.details {
+  background: $dark-blue;
+  height: 75%;
+  position: absolute;
+  width: 100%;
+  bottom: 0%;
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.work-card {
+  background: no-repeat url("../images/icon-work.svg"), $soft-orange;
+  background-position: 90% -14%;
+}
+.play-card {
+  background: no-repeat url("../images/icon-play.svg"), $soft-blue;
+  background-position: 90% -4%;
+}
+.study-card {
+  background: no-repeat url("../images/icon-study.svg"), $light-red;
+  background-position: 90% -5%;
+}
+.exercise-card {
+  background: no-repeat url("../images/icon-exercise.svg"), $lime-green;
+  background-position: 90% 0;
+}
+.social-card {
+  background: no-repeat url("../images/icon-social.svg"), $violet;
+  background-position: 90% -20%;
+}
+.self-care-card {
+  background: no-repeat url("../images/icon-self-care.svg"), $yellow;
+  background-position: 90% -10%;
 }
