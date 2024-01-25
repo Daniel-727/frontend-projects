@@ -30,7 +30,6 @@ main {
 /* Cards */
 .card {
   position: relative;
-  /* background: red; */
   height: 16rem;
   border-radius: 10px;
 }
@@ -46,7 +45,30 @@ main {
   width: 100%;
   bottom: 0%;
   border-radius: 10px;
-  padding: 1.5rem;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  .title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    align-self: center;
+  }
+  .time {
+    font-weight: 300;
+    font-size: 2.8rem;
+    align-self: center;
+  }
+  .last-week {
+    justify-self: end;
+    align-self: center;
+    font-size: 1.2rem;
+    color: $pale-blue;
+  }
+  button {
+    border: none;
+    background: none;
+    justify-self: end;
+  }
 }
 
 .work-card {
