@@ -20,10 +20,9 @@ body {
 
 main {
   padding: 2rem;
-  width: 355px;
+  min-width: 355px;
   height: 100%;
   background: $very-dark-blue;
-  display: grid;
   gap: 2rem;
 }
 
