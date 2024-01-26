@@ -34,8 +34,9 @@ main {
   border-radius: 10px;
 }
 
-.card:hover .details {
+.details:hover {
   background: $desaturated-blue;
+  cursor: pointer;
 }
 
 .details {
@@ -100,6 +101,19 @@ main {
       color: $pale-blue;
       font-size: 1.6rem;
       align-self: end;
+    }
+  }
+  .timeframes {
+    display: flex;
+    padding: 1rem;
+    font-size: 1.6rem;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+    color: $pale-blue;
+    p:hover {
+      color: $white;
+      cursor: pointer;
     }
   }
 }

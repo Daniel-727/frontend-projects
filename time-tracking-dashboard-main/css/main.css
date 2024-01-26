@@ -93,8 +93,9 @@ main {
   border-radius: 10px;
 }
 
-.card:hover .details {
+.details:hover {
   background: hsl(235, 45%, 61%);
+  cursor: pointer;
 }
 
 .details {
@@ -161,6 +162,19 @@ main {
   color: hsl(236, 100%, 87%);
   font-size: 1.6rem;
   align-self: end;
+}
+.profile-card .timeframes {
+  display: flex;
+  padding: 1rem;
+  font-size: 1.6rem;
+  justify-content: space-around;
+  align-items: center;
+  height: 30%;
+  color: hsl(236, 100%, 87%);
+}
+.profile-card .timeframes p:hover {
+  color: #fafafa;
+  cursor: pointer;
 }
 
 .work-card {
