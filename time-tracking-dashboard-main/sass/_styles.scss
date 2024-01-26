@@ -14,8 +14,14 @@ $pale-blue: hsl(236, 100%, 87%);
 $white: #fafafa;
 
 body {
+  background: $very-dark-blue;
+  height: 100vh;
   font-family: "Rubik", sans-serif;
   color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -36,6 +42,13 @@ main {
 .details:hover {
   background: $desaturated-blue;
   cursor: pointer;
+}
+
+.ellipsis:hover {
+  cursor: pointer;
+  path {
+    fill: $white;
+  }
 }
 
 .details {

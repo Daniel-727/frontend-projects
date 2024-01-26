@@ -73,8 +73,14 @@ h6 {
 
 /* Variables */
 body {
+  background: hsl(226, 43%, 10%);
+  height: 100vh;
   font-family: "Rubik", sans-serif;
   color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
@@ -95,6 +101,13 @@ main {
 .details:hover {
   background: hsl(235, 45%, 61%);
   cursor: pointer;
+}
+
+.ellipsis:hover {
+  cursor: pointer;
+}
+.ellipsis:hover path {
+  fill: #fafafa;
 }
 
 .details {
@@ -215,6 +228,9 @@ main {
   .card {
     height: 100%;
   }
+  .details {
+    height: 85%;
+  }
   .profile-card {
     height: 100%;
     grid-row-start: span 2;
@@ -238,7 +254,45 @@ main {
     flex-direction: column;
   }
 }
-/* @media (min-width: 800px) and (pointer: fine) {
-} */
+@media (min-width: 1000px) {
+  main {
+    height: 60%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .card .time {
+    grid-column-start: span 2;
+    align-self: start;
+    font-size: 4rem;
+  }
+  .card .last-week {
+    grid-column-start: span 2;
+    justify-self: start;
+  }
+  .profile-card .profile {
+    padding: 4rem;
+  }
+  .profile-card .profile img {
+    align-self: start;
+    margin-bottom: 2rem;
+  }
+  .profile-card .profile p {
+    grid-column-start: span 2;
+    align-self: start;
+    font-size: 4rem;
+    overflow-wrap: break-word;
+    line-height: 5rem;
+  }
+  .profile-card .profile p:first-of-type {
+    align-self: start;
+    line-height: 2.6rem;
+  }
+  .profile-card .timeframes {
+    align-items: start;
+    padding: 2.6rem;
+    padding-left: 4rem;
+    gap: 1rem;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
