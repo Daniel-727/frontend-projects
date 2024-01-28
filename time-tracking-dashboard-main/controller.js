@@ -1,6 +1,6 @@
 import time from "./data.json" assert { type: "json" };
 
-const getDailyView = () => {
+const getDailyTimes = () => {
   let dailyValues = {};
   time.forEach((item) => {
     const itemTitle = item.title;
@@ -11,7 +11,7 @@ const getDailyView = () => {
   return dailyValues;
 };
 
-const getWeeklyView = () => {
+const getWeeklyTimes = () => {
   let weeklyValues = {};
   time.forEach((item) => {
     const itemTitle = item.title;
@@ -22,7 +22,7 @@ const getWeeklyView = () => {
   return weeklyValues;
 };
 
-const getMonthlyView = () => {
+const getMonthlyTimes = () => {
   let monthlyValues = {};
   time.forEach((item) => {
     const itemTitle = item.title;
@@ -33,4 +33,4 @@ const getMonthlyView = () => {
   return monthlyValues;
 };
 
-export { getDailyView, getWeeklyView, getMonthlyView };
+export { getDailyTimes, getWeeklyTimes, getMonthlyTimes };

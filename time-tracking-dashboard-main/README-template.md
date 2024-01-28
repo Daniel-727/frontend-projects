@@ -72,6 +72,14 @@ I figured out a way to create the card background is to overlay the image and th
 }
 ```
 
+Javascript
+
+Some of my objects had spaces in the keys, so to access the key, I had to use bracket notation
+
+```js
+selfCareTime.textContent = times["Self Care"].current;
+```
+
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
