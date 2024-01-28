@@ -1,3 +1,8 @@
+import { getDailyView, getWeeklyView, getMonthlyView } from "./controller.js";
+
+// Update View
+const updateView = () => {};
+
 // Elements
 
 // Buttons for different views
@@ -29,4 +34,7 @@ const [socialTitle, socialButton, socialTime, socialPreviousTime] = socialDetail
 const selfcareDetails = document.querySelector("[data-id='self-care-details']");
 const [selfCareTitle, selfCareButton, selfCareTime, selfCarePreviousTime] = selfcareDetails.children;
 
-dailyBtn.addEventListener("click", () => console.log(previousTime));
+// Event listeners
+dailyBtn.addEventListener("click", () => updateView(getDailyView()));
+weeklyBtn.addEventListener("click", () => console.log(updateWeeklyView()));
+monthlyBtn.addEventListener("click", () => console.log(updateMonthlyView()));
